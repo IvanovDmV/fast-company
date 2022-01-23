@@ -5,6 +5,7 @@ import { useAuth } from "../../hooks/useAuth";
 const UserCard = ({ user }) => {
     const history = useHistory();
     const { currentUser } = useAuth();
+
     const handleClick = () => {
         history.push(history.location.pathname + "/edit");
     };

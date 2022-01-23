@@ -16,6 +16,7 @@ const UserProvider = ({ children }) => {
     useEffect(() => {
         getUsers();
     }, []);
+
     async function getUsers() {
         try {
             const { content } = await userService.get();
@@ -41,7 +42,7 @@ const UserProvider = ({ children }) => {
     }
     return (
         <UserContext.Provider value={{ users, getUserById }}>
-            {!isLoading ? children : "Loading...."}
+            {!isLoading ? children : "Loading..."}
         </UserContext.Provider>
     );
 };

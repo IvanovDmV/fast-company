@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 const ProtectedRoute = ({ component: Component, children, ...rest }) => {
     const { currentUser } = useAuth();
+
     return (
         <Route
             {...rest}
